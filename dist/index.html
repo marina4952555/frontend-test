@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+<script defer src="main.bundle.js"></script></head>
+<body>
+  <main>
+    <section class="section">
+      <div class="info">
+        <picture>
+          <source media="(max-width:1024px)" srcset="img/promo_mobile.png">
+          <img class="" src="img/promo_desctop.png" alt="promo">
+        </picture>
+        <div class="info__text">
+          <h1 class="info__title">Подберём вуз мечты</h1>
+          <p class="info__subtitle">Ответьте на 8 простых вопросов, и мы составим список наболее подходящих для вас вузов</p>
+        </div>
+      </div>
+      <div class="form">
+        <form class="form__list">
+          <fieldset class="form__item">
+            <div class="form__container">
+              <div class="form__title">
+                <p class="form__title-step">Шаг <span class="form__step-number"></span>/<span class="form__step-all"></span></p>
+                <legend class="form__title-text">Для кого вы ищете учебное заведение?</legend>
+              </div>
+              <div class="form__label-box form__label-box--column">
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="person" value="yourself">Себе</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="person" value="colleague">Коллеге</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="person" value="spouse">Супругу/супруге</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="person" value="relative">Родственнику</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="person" value="child">Ребенку</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="person" value="other">Другое</input>
+                </label>
+              </div>              
+            </div>
+            <button class="form__next" type="button" id="person" disabled>Далее
+              <svg width="8" height="13" viewBox="0 0 8 13" fill="none">
+                <path d="M1.5 1.5L6.5 6.5L1.5 11.5" stroke="white" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </fieldset>
+          <fieldset class="form__item">
+            <div class="form__container">
+              <div class="form__title">
+                <p class="form__title-step">Шаг <span class="form__step-number"></span>/<span class="form__step-all"></span></p>
+                <legend class="form__title-text">В каком городе планируете поступать?</legend>
+              </div>
+              <select class="form__select" name="city" id="city-select">
+                <option value="Sankt-peterburg">Санкт-Петербург</option>
+                <option value="Moskva">Москва</option>
+                <option value="Novosibirsk">Новосибирск</option>
+                <option value="Nizny Novgorod">Нижний Новгород</option>
+                <option value="Rostov-na-Donu">Ростов-на-Дону</option>
+              </select>
+            </div>
+            <div class="form__button-box">
+              <button class="form__back" type="button">Назад</button>
+              <button class="form__next" type="button" id="city" disabled>Далее</button>
+            </div>
+          </fieldset>
+          <fieldset  class="form__item">
+            <div class="form__container">
+              <div class="form__title">
+                <p class="form__title-step">Шаг <span class="form__step-number"></span>/<span class="form__step-all"></span></p>
+                <legend class="form__title-text">Какое образование уже есть?</legend>
+              </div>
+              <div class="form__label-box form__label-box--column">
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="education" value="9 classes">9 классов</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="education" value="11 classes">11 классов</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="education" value="specialized school">Училище</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="education" value="college">Колледж/техникум</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="education" value="11 classes">11 классов</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="education" value="incomplete higher education">Неоконченное высшее</input>
+                </label>
+              </div>              
+            </div>
+            <div class="form__button-box">
+              <button class="form__back" type="button">Назад</button>
+              <button class="form__next" type="button" id="education" disabled>Далее</button>
+            </div>
+          </fieldset>
+          <fieldset class="form__item">
+            <div class="form__container">
+              <div class="form__title">
+                <p class="form__title-step">Шаг <span class="form__step-number"></span>/<span class="form__step-all"></span></p>
+                <legend class="form__title-text">Куда планируете поступать?</legend>
+              </div>
+              <div class="form__label-box">
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="place of study" value="university">Вуз</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="place of study" value="college">Колледж/техникум</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="place of study" value="specialized school">Училище</input>
+                </label>
+              </div>
+            </div>
+            <div class="form__button-box">
+              <button class="form__back" type="button">Назад</button>
+              <button class="form__next" type="button" id="place-of-study" disabled>Далее</button>
+            </div>
+          </fieldset>
+          <fieldset class="form__item">
+            <div class="form__container">
+              <div class="form__title">
+                <p class="form__title-step">Шаг <span class="form__step-number"></span>/<span class="form__step-all"></span></p>
+                <legend class="form__title-text">Какую форму обучения предпочитаете?</legend>
+              </div>
+              <div class="form__label-box">
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="study format" value="university">Вуз</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="study format" value="extramural">Заочную</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="study format" value="remotely">Дистанционную</input>
+              </div>
+            </div>
+            <div class="form__button-box">
+              <button class="form__back" type="button">Назад</button>
+              <button class="form__next" type="button" id="study-format" disabled>Далее</button>
+            </div>
+          </fieldset>
+          <fieldset class="form__item">
+            <div class="form__container">
+              <div class="form__title">
+                <p class="form__title-step">Шаг <span class="form__step-number"></span>/<span class="form__step-all"></span></p>
+                <legend class="form__title-text">Рассматриваете платное обучение?</legend>
+              </div>
+              <div class="form__label-box">
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="paid training" value="no">Нет, только бюджет</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="paid training" value="yes">Да, планирую учиться платно</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="paid training" value="both">Возможны оба варианта</input>
+                </label>
+              </div>              
+            </div>
+            <div class="form__button-box">
+              <button class="form__back" type="button">Назад</button>
+              <button class="form__next" type="button" id="paid-training" disabled>Далее</button>
+            </div>
+          </fieldset>
+          <fieldset class="form__item">
+            <div class="form__container">
+              <div class="form__title">
+                <p class="form__title-step">Шаг <span class="form__step-number"></span>/<span class="form__step-all"></span></p>
+                <legend class="form__title-text">Какая специальность интересует?</legend>
+              </div>
+              <select class="form__select" name="speciality" id="speciality-select">
+                <option value="Any">Любая</option>
+                <option value="Economy">Экономика</option>
+                <option value="Philosophy">Философия</option>
+                <option value="Sociology">Социалогия</option>
+                <option value="Jurisprudence">Юрриспруденция</option>
+                <option value="Management">Менеджмент</option>
+              </select>              
+            </div>
+            <div class="form__button-box">
+              <button class="form__back" type="button">Назад</button>
+              <button class="form__next" type="button" id="speciality" disabled>Далее</button>
+            </div>
+          </fieldset>
+          <fieldset class="form__item">
+            <div class="form__container">
+              <div class="form__title">
+                <p class="form__title-step">Шаг <span class="form__step-number"></span>/<span class="form__step-all"></span></p>
+                <legend class="form__title-text">Как скоро планируете поступать?</legend>
+              </div>
+              <div class="form__label-box form__label-box--column" >
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="arrival time" value="fast">Как можно быстрее</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="arrival time" value="month">Месяц</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="arrival time" value="quarter">Квартал</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="arrival time" value="six months">Полгода</input>
+                </label>
+                <label class="form__label">
+                  <input class="form__input" type="radio" name="arrival time" value="year">Год</input>
+                </label>
+              </div>              
+            </div>
+            <div class="form__button-box">
+              <button class="form__back" type="button">Назад</button>
+              <button class="form__next" type="button" id="arrival-time" disabled>Далее</button>
+            </div>
+          </fieldset>
+          <fieldset class="form__item">            
+            <div class="form__title">
+              <p class="form__title-step">Шаг <span class="form__step-number"></span>/<span class="form__step-all"></span></p>
+              <legend class="form__title-text">Ваша подборка готова! 🥳 Куда нам отправить её?</legend>
+            </div>
+            <div class="form__label-box">
+              <label>
+                <input class="form__input-text" type="text" id="nameInput" placeholder="Как вас зовут?" required />
+              </label>
+              <label>
+                <input class="form__input-text" type="tel" id="numberInput" placeholder="Номер телефона" required />
+              </label>
+              <label>
+                <input class="form__input-text" type="email" id="emailInput" placeholder="E-mail" required />
+              </label>              
+            </div>
+            <div>
+              <button class="form__next form__final" type="button" id="final" disabled>Получить подборку</button>
+              <p class="form__final-text">Нажимая на кнопку, вы даете согласие на обработку своих <span class="form__final-link">Персональных данных</span>Персональных данных</p>              
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
